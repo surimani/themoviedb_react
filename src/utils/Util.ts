@@ -1,5 +1,5 @@
-export function getImageUrl(url: string) {
-    return `https://image.tmdb.org/t/p/original${url}`
+export function getImageUrl(url: string, defaultImage: string) {
+    return url ? `https://image.tmdb.org/t/p/original${url}` : defaultImage
 }
 
 export function toHours(duration: number) {
