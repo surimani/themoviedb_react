@@ -1,10 +1,10 @@
 {
-  "include": ["src/*"],
+  "include": ["src", "types"],
   "compilerOptions": {
     "target": "es5",
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
   },
   "exclude": ["node_modules", "dist"]
 }
