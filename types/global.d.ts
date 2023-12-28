@@ -23,11 +23,7 @@ declare global {
         payload?: any;
     }
     
-    type ReducerType = (state: MovieState, action: Action) => MovieState;    
-    type ContextHook = () => {
-        state: MovieState,
-        dispatch: (action: Action) => void;
-    }
+    type ReducerType = (state: MovieState, action: Action) => MovieState;
 }
 
 
