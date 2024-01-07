@@ -8,7 +8,9 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<MovieList />} />
+        <Route path="/" element={<MovieList movieType='popular' />} />
+        <Route path="/popular" element={<MovieList movieType='popular' />} />
+        <Route path="/toprated" element={<MovieList movieType="toprated" />} />
         <Route path="/movie/:movieId" element={<MovieDetails />} />        
       </Routes>
     </div>
