@@ -5,6 +5,7 @@
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "types": ["node", "jest", "@testing-library/jest-dom"],
   },
   "exclude": ["node_modules", "dist"]
 }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
-import { TMDB } from 'tmdb-ts';
 import { Link } from 'react-router-dom'
 import { useMoviesContext } from "../context";
 import { getImageUrl, toHours, formatDate, getCertification, getFilteredCrew, getFilteredCast, getTrailers } from '../utils/Util';
 import PersonDefault from '../assets/person.png';
+import Header from "./Header";
 
 function MovieDetails(): JSX.Element | null {
     const [movieDetails, setMovieDetails] = useState<MovieDetailsAll>(null);
@@ -23,11 +23,11 @@ function MovieDetails(): JSX.Element | null {
             setMovieDetails(details)
         })
     }, [params.movieId])
-    if (!movieDetails) return <>Loading....</>;
+    if (!movieDetails) return <>Loading...</>;
     return (
-        <div>
-            <Link to='/'><div className="p-4 text-2xl">&larr; HOME</div></Link>
-            <div className="flex flex-row container mx-auto px-4">
+        <div className="bg-gray-50">
+            <Header />
+            <div className="flex flex-row w-full mx-auto">
                 <div className="basis-1/4">
                     <img className="m-auto" src={getImageUrl(movieDetails.poster_path, null)} alt="" />
                 </div>
